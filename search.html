@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zabrali Store</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <!-- fontawesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="container">
+                <div class="navbar-content align-items-center">
+                    <div class="left-content">
+                        <div class="logo"><img src="assets/images/s7.png" class="mw-100"></div>
+                    </div>
+                    <div class="center-content">
+                        <div>
+                            <form action="#" method="post" class="cat-serach">
+                                <input type="text" placeholder="Search For Products">
+                                <select name="categories" class="">
+                                    <option value="">All Categories</option>
+                                    <option value="Automotive">Automotive</option>
+                                    <option value="Electronics">Electronics</option>
+                                    <option value="Clothing">Clothing</option>
+                                    <option value="Games">Games</option>
+                                    <option value="Outdoors">Outdoors</option>
+                                </select>
+                                <button type="submit" class="btn"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="right-header position-relative">
+                        <div class="right-content">
+                            <div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/255px-Flag_of_Canada_%28Pantone%29.svg.png">
+                                <div>EN/ <br><strong>CAD</strong></div>
+                            </div>
+                            <div>
+                                <img src="https://static.vecteezy.com/system/resources/previews/020/911/740/original/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png">
+                                <div>Welcome <br> <strong>James</strong></div>
+                            </div>
+                            <div>
+                                <img src="https://cdn-icons-png.flaticon.com/512/1413/1413908.png" class="cart-img">
+                                <div><strong>26</strong><br>Cart</div>
+                            </div>
+                            <div>
+                                <img src="https://cdn-icons-png.flaticon.com/512/3119/3119338.png">
+                                <sup>4</sup>
+                            </div>
+                        </div>
+                        <div class="shopping-cart-panel">
+                            <h4>Your Shopping Cart</h4>
+                            <div class="cart-table">
+                                <table>
+                                    <tr>
+                                        <td>Pyrex Glass Measuring Cup Set</td>
+                                        <td><img src="https://m.media-amazon.com/images/I/71ygLu2o0OL._AC_SX679_.jpg"></td>
+                                        <td>$23.39</td>
+                                        <td>Qty: 1</td>
+                                        <td><a href="#" class="btn btn-cart">Save for later</a></td>
+                                        <td><a href="#" class="btn btn-cart px-3"><i class="fas fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Easywring Microfiber Spin Mop Good</td>
+                                        <td><img src="https://m.media-amazon.com/images/I/81QCOKw3AuL._AC_SX679_.jpg"></td>
+                                        <td>$23.39</td>
+                                        <td>Qty: 1</td>
+                                        <td><a href="#" class="btn btn-cart">Save for later</a></td>
+                                        <td><a href="#" class="btn btn-cart px-3"><i class="fas fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Home Hero 33 Pcs Silicone Kitchen</td>
+                                        <td><img src="https://m.media-amazon.com/images/I/710dYCmCvQL._AC_SX679_.jpg"></td>
+                                        <td>$14.99</td>
+                                        <td>Qty: 1</td>
+                                        <td><a href="#" class="btn btn-cart">Save for later</a></td>
+                                        <td><a href="#" class="btn btn-cart px-3"><i class="fas fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vegetable Chopper, Pro Onion Chopper</td>
+                                        <td><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg"></td>
+                                        <td>$18.89</td>
+                                        <td>Qty: 1</td>
+                                        <td><a href="#" class="btn btn-cart">Save for later</a></td>
+                                        <td><a href="#" class="btn btn-cart px-3"><i class="fas fa-trash-alt"></i></a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="buttons">
+                                <a href="#" class="btn btn-bottom">Save For Later</a>
+                                <a href="#" class="btn btn-bottom">Checkout Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content pt-4">
+            <div class="container">
+                <div class="filter-section">
+                    <div class="filter-flex">
+                        <h4>Search Filters: </h4>
+                        <div class="center-flex">
+                            <div>
+                                <label for="relavence">Relavence</label>
+                                <select name="relavence" id="relavence">
+                                    <option value="Relavence">Relavence</option>
+                                    <option value="Relavence1">Relavence 1</option>
+                                    <option value="Relavence2">Relavence 2</option>
+                                </select>
+                            </div>
+                            <div class="price-range">
+                                <label for="from">Price Range</label>
+                                <input name="from" id="from" placeholder="Minimum $"> <span class="mb-divider"></span>
+                                <label for="to">To</label>
+                                <input name="to" id="to" placeholder="Maximum $">
+                            </div>
+                            <div>
+                                <label for="rating">Rating</label>
+                                <select name="rating" id="rating">
+                                    <option value="">Any</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="">
+                            <a href="#" class="btn btn-filter">Aplly Filter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-section">
+                <div class="container">
+                    <div class="mb-4">146 results found for: ""</div>
+                    <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="product-card">
+                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/71ygLu2o0OL._AC_SX679_.jpg" class="w-100"></div>
+                                <div class="ratting-flex">
+                                    <div class="stars">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                    </div>
+                                    <div class="ratting-ratio">4.9/5</div>
+                                </div>
+                                <div class="description">Pyrex Glass Measuring Cup Set (3-Piece Set ...</div>
+                                <div class="bottom-flex">
+                                    <div class="price">$23.39</div>
+                                    <div class="add-to-cart">
+                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="product-card">
+                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81QCOKw3AuL._AC_SX679_.jpg" class="w-100"></div>
+                                <div class="ratting-flex">
+                                    <div class="stars">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="ratting-ratio">3/5</div>
+                                </div>
+                                <div class="description">Easywring Microfiber Spin Mop Good For ...</div>
+                                <div class="bottom-flex">
+                                    <div class="price">$23.39</div>
+                                    <div class="add-to-cart">
+                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="product-card">
+                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/710dYCmCvQL._AC_SX679_.jpg" class="w-100"></div>
+                                <div class="ratting-flex">
+                                    <div class="stars">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                    </div>
+                                    <div class="ratting-ratio">5/5</div>
+                                </div>
+                                <div class="description">Home Hero 33 Pcs Silicone Kitchen Utencils ...</div>
+                                <div class="bottom-flex">
+                                    <div class="price">$14.99</div>
+                                    <div class="add-to-cart">
+                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="product-card">
+                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81WR5GYdJvL._AC_SX679_PIbundle-2,TopRight,0,0_SH20_.jpg" class="w-100"></div>
+                                <div class="ratting-flex">
+                                    <div class="stars">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="ratting-ratio">4.2/5</div>
+                                </div>
+                                <div class="description">Utopia Kitchen Can Organizer For Pantry ...</div>
+                                <div class="bottom-flex">
+                                    <div class="price">$14.99</div>
+                                    <div class="add-to-cart">
+                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="product-card">
+                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
+                                <div class="ratting-flex">
+                                    <div class="stars">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                    </div>
+                                    <div class="ratting-ratio">5/5</div>
+                                </div>
+                                <div class="description">Vegetable Chopper, Pro Onion Chopper With ...</div>
+                                <div class="bottom-flex">
+                                    <div class="price">$18.89</div>
+                                    <div class="add-to-cart">
+                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="product-card">
+                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
+                                <div class="ratting-flex">
+                                    <div class="stars">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                    </div>
+                                    <div class="ratting-ratio">5/5</div>
+                                </div>
+                                <div class="description">Vegetable Chopper, Pro Onion Chopper With ...</div>
+                                <div class="bottom-flex">
+                                    <div class="price">$18.89</div>
+                                    <div class="add-to-cart">
+                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="product-card">
+                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/71ygLu2o0OL._AC_SX679_.jpg" class="w-100"></div>
+                                <div class="ratting-flex">
+                                    <div class="stars">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                    </div>
+                                    <div class="ratting-ratio">4.9/5</div>
+                                </div>
+                                <div class="description">Pyrex Glass Measuring Cup Set (3-Piece Set ...</div>
+                                <div class="bottom-flex">
+                                    <div class="price">$23.39</div>
+                                    <div class="add-to-cart">
+                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="product-card">
+                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81QCOKw3AuL._AC_SX679_.jpg" class="w-100"></div>
+                                <div class="ratting-flex">
+                                    <div class="stars">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="ratting-ratio">3/5</div>
+                                </div>
+                                <div class="description">Easywring Microfiber Spin Mop Good For ...</div>
+                                <div class="bottom-flex">
+                                    <div class="price">$23.39</div>
+                                    <div class="add-to-cart">
+                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="product-card">
+                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/710dYCmCvQL._AC_SX679_.jpg" class="w-100"></div>
+                                <div class="ratting-flex">
+                                    <div class="stars">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                    </div>
+                                    <div class="ratting-ratio">5/5</div>
+                                </div>
+                                <div class="description">Home Hero 33 Pcs Silicone Kitchen Utencils ...</div>
+                                <div class="bottom-flex">
+                                    <div class="price">$14.99</div>
+                                    <div class="add-to-cart">
+                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="product-card">
+                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81WR5GYdJvL._AC_SX679_PIbundle-2,TopRight,0,0_SH20_.jpg" class="w-100"></div>
+                                <div class="ratting-flex">
+                                    <div class="stars">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="ratting-ratio">4.2/5</div>
+                                </div>
+                                <div class="description">Utopia Kitchen Can Organizer For Pantry ...</div>
+                                <div class="bottom-flex">
+                                    <div class="price">$14.99</div>
+                                    <div class="add-to-cart">
+                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="product-card">
+                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
+                                <div class="ratting-flex">
+                                    <div class="stars">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                    </div>
+                                    <div class="ratting-ratio">5/5</div>
+                                </div>
+                                <div class="description">Vegetable Chopper, Pro Onion Chopper With ...</div>
+                                <div class="bottom-flex">
+                                    <div class="price">$18.89</div>
+                                    <div class="add-to-cart">
+                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="product-card">
+                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
+                                <div class="ratting-flex">
+                                    <div class="stars">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                    </div>
+                                    <div class="ratting-ratio">5/5</div>
+                                </div>
+                                <div class="description">Vegetable Chopper, Pro Onion Chopper With ...</div>
+                                <div class="bottom-flex">
+                                    <div class="price">$18.89</div>
+                                    <div class="add-to-cart">
+                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="product-card">
+                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/71ygLu2o0OL._AC_SX679_.jpg" class="w-100"></div>
+                                <div class="ratting-flex">
+                                    <div class="stars">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                    </div>
+                                    <div class="ratting-ratio">4.9/5</div>
+                                </div>
+                                <div class="description">Pyrex Glass Measuring Cup Set (3-Piece Set ...</div>
+                                <div class="bottom-flex">
+                                    <div class="price">$23.39</div>
+                                    <div class="add-to-cart">
+                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="product-card">
+                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81QCOKw3AuL._AC_SX679_.jpg" class="w-100"></div>
+                                <div class="ratting-flex">
+                                    <div class="stars">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="ratting-ratio">3/5</div>
+                                </div>
+                                <div class="description">Easywring Microfiber Spin Mop Good For ...</div>
+                                <div class="bottom-flex">
+                                    <div class="price">$23.39</div>
+                                    <div class="add-to-cart">
+                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="product-card">
+                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/710dYCmCvQL._AC_SX679_.jpg" class="w-100"></div>
+                                <div class="ratting-flex">
+                                    <div class="stars">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                    </div>
+                                    <div class="ratting-ratio">5/5</div>
+                                </div>
+                                <div class="description">Home Hero 33 Pcs Silicone Kitchen Utencils ...</div>
+                                <div class="bottom-flex">
+                                    <div class="price">$14.99</div>
+                                    <div class="add-to-cart">
+                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="product-card">
+                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81WR5GYdJvL._AC_SX679_PIbundle-2,TopRight,0,0_SH20_.jpg" class="w-100"></div>
+                                <div class="ratting-flex">
+                                    <div class="stars">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="ratting-ratio">4.2/5</div>
+                                </div>
+                                <div class="description">Utopia Kitchen Can Organizer For Pantry ...</div>
+                                <div class="bottom-flex">
+                                    <div class="price">$14.99</div>
+                                    <div class="add-to-cart">
+                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="product-card">
+                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
+                                <div class="ratting-flex">
+                                    <div class="stars">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                    </div>
+                                    <div class="ratting-ratio">5/5</div>
+                                </div>
+                                <div class="description">Vegetable Chopper, Pro Onion Chopper With ...</div>
+                                <div class="bottom-flex">
+                                    <div class="price">$18.89</div>
+                                    <div class="add-to-cart">
+                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                            <div class="product-card">
+                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
+                                <div class="ratting-flex">
+                                    <div class="stars">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                    </div>
+                                    <div class="ratting-ratio">5/5</div>
+                                </div>
+                                <div class="description">Vegetable Chopper, Pro Onion Chopper With ...</div>
+                                <div class="bottom-flex">
+                                    <div class="price">$18.89</div>
+                                    <div class="add-to-cart">
+                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

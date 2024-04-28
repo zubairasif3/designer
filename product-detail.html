@@ -12,7 +12,35 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <div class="panel-close"></div>
     <div class="wrapper">
+        <div class="sidebar-content">
+            <div class="top-content">
+                <div class="logo">
+                    <img src="assets/images/s7.png" class="mw-100">
+                </div>
+                <div class="close-sidebar">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <a href="#"><i class="fas fa-archway"></i> Home</a>
+                </li>
+                <li>
+                    <a href="#"><i class="far fa-user"></i> Profile</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-bell"></i> Notification</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </li>
+            </ul>
+        </div>
         <div class="header">
             <div class="container">
                 <div class="navbar-content align-items-center">
@@ -37,24 +65,43 @@
                     </div>
                     <div class="right-header position-relative">
                         <div class="right-content">
-                            <div>
+                            <div class="panel-nav" data-target="#language-switch-panel">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/255px-Flag_of_Canada_%28Pantone%29.svg.png">
                                 <div>EN/ <br><strong>CAD</strong></div>
                             </div>
-                            <div>
+                            <div class="panel-nav" data-target="#profile-menu-panel">
                                 <img src="https://static.vecteezy.com/system/resources/previews/020/911/740/original/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png">
                                 <div>Welcome <br> <strong>James</strong></div>
                             </div>
-                            <div>
-                                <img src="https://cdn-icons-png.flaticon.com/512/1413/1413908.png" class="cart-img">
+                            <div class="panel-nav" data-target="#shopping-cart-panel">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1413/1413908.png">
                                 <div><strong>26</strong><br>Cart</div>
                             </div>
-                            <div>
+                            <div class="panel-nav" data-target="#notification-list-panel">
                                 <img src="https://cdn-icons-png.flaticon.com/512/3119/3119338.png">
                                 <sup>4</sup>
                             </div>
                         </div>
-                        <div class="shopping-cart-panel">
+                        <div class="cart-panel-item" id="language-switch-panel">
+                            <div class="langauge-options">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/255px-Flag_of_Canada_%28Pantone%29.svg.png">
+                                <div>EN/ <br><strong>CAD</strong></div>
+                            </div>
+                            <div class="langauge-options">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/255px-Flag_of_Canada_%28Pantone%29.svg.png">
+                                <div>EN/ <br><strong>CAD</strong></div>
+                            </div>
+                            <div class="langauge-options">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/255px-Flag_of_Canada_%28Pantone%29.svg.png">
+                                <div>EN/ <br><strong>CAD</strong></div>
+                            </div>
+                        </div>
+                        <div class="cart-panel-item" id="profile-menu-panel">
+                            <a href="#"><i class="far fa-user"></i> Profile</a>
+                            <a href="#"><i class="fas fa-lock"></i> Change Password</a>
+                            <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                        <div class="cart-panel-item" id="shopping-cart-panel">
                             <h4>Your Shopping Cart</h4>
                             <div class="cart-table">
                                 <table>
@@ -97,6 +144,61 @@
                                 <a href="#" class="btn btn-bottom">Checkout Cart</a>
                             </div>
                         </div>
+                        <div class="cart-panel-item" id="notification-list-panel">
+                            <h4>Notifications</h4>
+                            <div class="cart-table">
+                                <table>
+                                    <tr>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td class="pe-2">
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Mark as Read"><i class="fas fa-check"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td class="pe-2">
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Mark as Read"><i class="fas fa-check"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td class="pe-2">
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Mark as Read"><i class="fas fa-check"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td class="pe-2">
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Mark as Read"><i class="fas fa-check"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td class="pe-2">
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Mark as Read"><i class="fas fa-check"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="buttons justify-content-center">
+                                <a href="#" class="btn btn-bottom">View All</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -113,7 +215,17 @@
                     </div>
                     <div class="right-content">
                         <div class="top-flex">
-                            <div class="main-img"><img src="https://i.ebayimg.com/thumbs/images/g/YMIAAOSwtiJkymV6/s-l225.webp" class="w-100"></div>
+                            <div class="main-img">
+                                <div class="img-zoom-container" onmousenter="showme(this)">
+                                    <span>
+                                        <p class="imgid" style="align:center;"><img id="myimage" src="https://i.ebayimg.com/thumbs/images/g/YMIAAOSwtiJkymV6/s-l225.webp"  srcset="https://i.ebayimg.com/thumbs/images/g/YMIAAOSwtiJkymV6/s-l225.webp"  class="w-100"></p>
+                                    </span>
+                                    <span id="myhide" style="float: right; position: absolute; top: -0px; right: -320px; width: auto; height: 100%;">
+                                        <div id="myresult" class="img-zoom-result"  onmouseleave="hideme(this)" ></div>
+                                    </span>
+                                </div>
+                                <!-- <img src="https://i.ebayimg.com/thumbs/images/g/YMIAAOSwtiJkymV6/s-l225.webp" class="w-100"> -->
+                            </div>
                             <div class="detail">
                                 <h4>Lenovo LOQ 16" RTX 4050 144HZ AMD</h4>
                                 <div class="price">US $30.00</div>
@@ -126,6 +238,10 @@
                                     </select>
                                 </div>
                                 <div class="stock">Available Stock: 55</div>
+                                <div class="buttons">
+                                    <a href="#" class="btn btn-cart me-4">Add to Cart</a>
+                                    <a href="#" class="btn btn-buy">Buy Now</a>
+                                </div>
                             </div>
                         </div>
                         <div class="bottom-content">
@@ -155,5 +271,6 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/image-zoom.js"></script>
 </body>
 </html>

@@ -14,7 +14,35 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <div class="panel-close"></div>
     <div class="wrapper">
+        <div class="sidebar-content">
+            <div class="top-content">
+                <div class="logo">
+                    <img src="assets/images/s7.png" class="mw-100">
+                </div>
+                <div class="close-sidebar">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <a href="#"><i class="fas fa-archway"></i> Home</a>
+                </li>
+                <li>
+                    <a href="#"><i class="far fa-user"></i> Profile</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-bell"></i> Notification</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </li>
+            </ul>
+        </div>
         <div class="header">
             <div class="container">
                 <div class="navbar-content">
@@ -25,14 +53,36 @@
                                 <div class="count-down" id="countDownTimer"></div>
                             </div>
                         </div>
+                            <div class="logo mb-navbar-show">
+                                <img src="assets/images/s7.png" class="mw-100 pe-4">
+                                <div class="center-content">
+                                    <form action="#" method="post" class="cat-serach">
+                                        <input type="text" placeholder="Search For Products">
+                                        <select name="categories" class="">
+                                            <option value="">All Categories</option>
+                                            <option value="Automotive">Automotive</option>
+                                            <option value="Electronics">Electronics</option>
+                                            <option value="Clothing">Clothing</option>
+                                            <option value="Games">Games</option>
+                                            <option value="Outdoors">Outdoors</option>
+                                        </select>
+                                        <button type="submit" class="btn"><i class="fas fa-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="menu-icon mb-navbar-show" id="sidebar-toggle"><i class="fas fa-bars"></i></div>
+                        <!-- <div class="mb-navbar-show">
+                        </div> -->
                     </div>
                     <div class="center-content">
-                        <div class="logo"><img src="assets/images/s7.png" class="mw-100"></div>
+                        <div class="mb-navbar-hide">
+                            <div class="logo"><img src="assets/images/s7.png" class="mw-100"></div>
+                        </div>
                         <div>
                             <form action="#" method="post" class="cat-serach">
                                 <input type="text" placeholder="Search For Products">
                                 <select name="categories" class="">
-                                    <option value="">All Categories123123</option>
+                                    <option value="">All Categories</option>
                                     <option value="Automotive">Automotive</option>
                                     <option value="Electronics">Electronics</option>
                                     <option value="Clothing">Clothing</option>
@@ -45,24 +95,43 @@
                     </div>
                     <div class="right-header position-relative">
                         <div class="right-content">
-                            <div>
+                            <div class="panel-nav" data-target="#language-switch-panel">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/255px-Flag_of_Canada_%28Pantone%29.svg.png">
                                 <div>EN/ <br><strong>CAD</strong></div>
                             </div>
-                            <div>
+                            <div class="panel-nav" data-target="#profile-menu-panel">
                                 <img src="https://static.vecteezy.com/system/resources/previews/020/911/740/original/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png">
                                 <div>Welcome <br> <strong>James</strong></div>
                             </div>
-                            <div>
-                                <img src="https://cdn-icons-png.flaticon.com/512/1413/1413908.png" class="cart-img">
+                            <div class="panel-nav" data-target="#shopping-cart-panel">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1413/1413908.png">
                                 <div><strong>26</strong><br>Cart</div>
                             </div>
-                            <div>
+                            <div class="panel-nav" data-target="#notification-list-panel">
                                 <img src="https://cdn-icons-png.flaticon.com/512/3119/3119338.png">
                                 <sup>4</sup>
                             </div>
                         </div>
-                        <div class="shopping-cart-panel">
+                        <div class="cart-panel-item" id="language-switch-panel">
+                            <div class="langauge-options">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/255px-Flag_of_Canada_%28Pantone%29.svg.png">
+                                <div>EN/ <br><strong>CAD</strong></div>
+                            </div>
+                            <div class="langauge-options">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/255px-Flag_of_Canada_%28Pantone%29.svg.png">
+                                <div>EN/ <br><strong>CAD</strong></div>
+                            </div>
+                            <div class="langauge-options">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/255px-Flag_of_Canada_%28Pantone%29.svg.png">
+                                <div>EN/ <br><strong>CAD</strong></div>
+                            </div>
+                        </div>
+                        <div class="cart-panel-item" id="profile-menu-panel">
+                            <a href="#"><i class="far fa-user"></i> Profile</a>
+                            <a href="#"><i class="fas fa-lock"></i> Change Password</a>
+                            <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                        <div class="cart-panel-item" id="shopping-cart-panel">
                             <h4>Your Shopping Cart</h4>
                             <div class="cart-table">
                                 <table>
@@ -105,6 +174,61 @@
                                 <a href="#" class="btn btn-bottom">Checkout Cart</a>
                             </div>
                         </div>
+                        <div class="cart-panel-item" id="notification-list-panel">
+                            <h4>Notifications</h4>
+                            <div class="cart-table">
+                                <table>
+                                    <tr>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td class="pe-2">
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Mark as Read"><i class="fas fa-check"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td class="pe-2">
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Mark as Read"><i class="fas fa-check"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td class="pe-2">
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Mark as Read"><i class="fas fa-check"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td class="pe-2">
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Mark as Read"><i class="fas fa-check"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td class="pe-2">
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Mark as Read"><i class="fas fa-check"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-cart d-inline-block px-2" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="buttons justify-content-center">
+                                <a href="#" class="btn btn-bottom">View All</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -115,136 +239,292 @@
                     <div class="heading">Trending Products</div>
                     <div class="owl-carousel product-carousel">
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/71ygLu2o0OL._AC_SX679_.jpg" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
+                            <a href="product-detail.html?product_id=1">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/71ygLu2o0OL._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">4.9/5</div>
                                     </div>
-                                    <div class="ratting-ratio">4.9/5</div>
-                                </div>
-                                <div class="description">Pyrex Glass Measuring Cup Set (3-Piece Set ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$23.39</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Pyrex Glass Measuring Cup Set (3-Piece Set Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$23.39</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81QCOKw3AuL._AC_SX679_.jpg" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                            <a href="product-detail.html?product_id=2">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81QCOKw3AuL._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="ratting-ratio">3/5</div>
                                     </div>
-                                    <div class="ratting-ratio">3/5</div>
-                                </div>
-                                <div class="description">Easywring Microfiber Spin Mop Good For ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$23.39</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Easywring Microfiber Spin Mop Good For Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$23.39</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/710dYCmCvQL._AC_SX679_.jpg" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
+                            <a href="product-detail.html?product_id=3">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/710dYCmCvQL._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
                                     </div>
-                                    <div class="ratting-ratio">5/5</div>
-                                </div>
-                                <div class="description">Home Hero 33 Pcs Silicone Kitchen Utencils ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$14.99</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description" id="flop">Home Hero 33 Pcs Silicone Kitchen Utencils Home Hero 33 Pcs Silicone Kitchen Utencils</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$14.99</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81WR5GYdJvL._AC_SX679_PIbundle-2,TopRight,0,0_SH20_.jpg" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star"></i>
+                            <a href="product-detail.html?product_id=4">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81WR5GYdJvL._AC_SX679_PIbundle-2,TopRight,0,0_SH20_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="ratting-ratio">4.2/5</div>
                                     </div>
-                                    <div class="ratting-ratio">4.2/5</div>
-                                </div>
-                                <div class="description">Utopia Kitchen Can Organizer For Pantry ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$14.99</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Utopia Kitchen Can Organizer For Pantry Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$14.99</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
+                            <a href="product-detail.html?product_id=5">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
                                     </div>
-                                    <div class="ratting-ratio">5/5</div>
-                                </div>
-                                <div class="description">Vegetable Chopper, Pro Onion Chopper With ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$18.89</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Vegetable Chopper, Pro Onion Chopper With Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$18.89</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
+                            <a href="product-detail.html?product_id=6">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
                                     </div>
-                                    <div class="ratting-ratio">5/5</div>
-                                </div>
-                                <div class="description">Vegetable Chopper, Pro Onion Chopper With ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$18.89</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Vegetable Chopper, Pro Onion Chopper With Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$18.89</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=7">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/71ygLu2o0OL._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">4.9/5</div>
+                                    </div>
+                                    <div class="description">Pyrex Glass Measuring Cup Set (3-Piece Set Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$23.39</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=8">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81QCOKw3AuL._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="ratting-ratio">3/5</div>
+                                    </div>
+                                    <div class="description">Easywring Microfiber Spin Mop Good For Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$23.39</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=9">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/710dYCmCvQL._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
+                                    </div>
+                                    <div class="description">Home Hero 33 Pcs Silicone Kitchen Utencils Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$14.99</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=10">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81WR5GYdJvL._AC_SX679_PIbundle-2,TopRight,0,0_SH20_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="ratting-ratio">4.2/5</div>
+                                    </div>
+                                    <div class="description">Utopia Kitchen Can Organizer For Pantry Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$14.99</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=11">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
+                                    </div>
+                                    <div class="description">Vegetable Chopper, Pro Onion Chopper With Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$18.89</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=12">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
+                                    </div>
+                                    <div class="description">Vegetable Chopper, Pro Onion Chopper With Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$18.89</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -281,6 +561,34 @@
                             <div class="cat-img"><img src="https://i.ebayimg.com/images/g/G3AAAOSwZc5iTyoe/s-l500.jpg"></div>
                             <div class="cat-title">Games</div>
                         </div>
+                        <div class="item">
+                            <div class="cat-img"><img src="https://i.ebayimg.com/images/g/-KcAAOSwhSBlzlsg/s-l500.jpg"></div>
+                            <div class="cat-title">Smartphones</div>
+                        </div>
+                        <div class="item">
+                            <div class="cat-img"><img src="https://i.ebayimg.com/images/g/YCEAAOSwEWFlzlxa/s-l500.jpg"></div>
+                            <div class="cat-title">Clothing</div>
+                        </div>
+                        <div class="item">
+                            <div class="cat-img"><img src="https://i.ebayimg.com/images/g/aqQAAOSwJO9lzlxs/s-l500.jpg"></div>
+                            <div class="cat-title">Tools</div>
+                        </div>
+                        <div class="item">
+                            <div class="cat-img"><img src="https://i.ebayimg.com/images/g/fAoAAOSwEvBlzlsL/s-l500.jpg"></div>
+                            <div class="cat-title">Automotive</div>
+                        </div>
+                        <div class="item">
+                            <div class="cat-img"><img src="https://i.ebayimg.com/images/g/P~gAAOSwJ59iTyoe/s-l500.jpg"></div>
+                            <div class="cat-title">Laptops</div>
+                        </div>
+                        <div class="item">
+                            <div class="cat-img"><img src="https://i.ebayimg.com/images/g/mrsAAOSwghBiTyoe/s-l500.jpg"></div>
+                            <div class="cat-title">Electronics</div>
+                        </div>
+                        <div class="item">
+                            <div class="cat-img"><img src="https://i.ebayimg.com/images/g/G3AAAOSwZc5iTyoe/s-l500.jpg"></div>
+                            <div class="cat-title">Games</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -289,136 +597,292 @@
                     <div class="heading">Electronics</div>
                     <div class="owl-carousel product-carousel">
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://i.ebayimg.com/thumbs/images/g/YMIAAOSwtiJkymV6/s-l225.webp" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
+                            <a href="product-detail.html?product_id=13">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://i.ebayimg.com/thumbs/images/g/YMIAAOSwtiJkymV6/s-l225.webp" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">4.9/5</div>
                                     </div>
-                                    <div class="ratting-ratio">4.9/5</div>
-                                </div>
-                                <div class="description">Lenovo LOQ 16" RTX 4050 144HZ AMD Ryzen ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price"></div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Lenovo LOQ 16" RTX 4050 144HZ AMD Ryzen Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price"></div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://i.ebayimg.com/thumbs/images/g/SXMAAOSwOydl7j5X/s-l300.webp" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                            <a href="product-detail.html?product_id=14">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://i.ebayimg.com/thumbs/images/g/SXMAAOSwOydl7j5X/s-l300.webp" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="ratting-ratio">3/5</div>
                                     </div>
-                                    <div class="ratting-ratio">3/5</div>
-                                </div>
-                                <div class="description">Dell Latitude 5289 2-in-1 Touchscreen Laptop i5 ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$231.12</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Dell Latitude 5289 2-in-1 Touchscreen Laptop i5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$231.12</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://i.ebayimg.com/thumbs/images/g/SbcAAOSwTSJiN-lQ/s-l300.webp" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
+                            <a href="product-detail.html?product_id=15">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://i.ebayimg.com/thumbs/images/g/SbcAAOSwTSJiN-lQ/s-l300.webp" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
                                     </div>
-                                    <div class="ratting-ratio">5/5</div>
-                                </div>
-                                <div class="description">Nintendo DS Lite Authentic DSL Console ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$13.58</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Nintendo DS Lite Authentic DSL Console Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$13.58</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://i.ebayimg.com/thumbs/images/g/9boAAOSw4SBl-GZm/s-l300.webp" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star"></i>
+                            <a href="product-detail.html?product_id=16">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://i.ebayimg.com/thumbs/images/g/9boAAOSw4SBl-GZm/s-l300.webp" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="ratting-ratio">4.2/5</div>
                                     </div>
-                                    <div class="ratting-ratio">4.2/5</div>
-                                </div>
-                                <div class="description">GUARANTEED Fat Playstation 2 Console ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$244.71</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">GUARANTEED Fat Playstation 2 Console Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$244.71</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://i.ebayimg.com/thumbs/images/g/A0QAAOSwKIdaZFiL/s-l225.webp" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
+                            <a href="product-detail.html?product_id=17">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://i.ebayimg.com/thumbs/images/g/A0QAAOSwKIdaZFiL/s-l225.webp" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
                                     </div>
-                                    <div class="ratting-ratio">5/5</div>
-                                </div>
-                                <div class="description">Apple iPad Air 1st Gen. 16GB, Wi-Fi, 9.7in - ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$94.99</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Apple iPad Air 1st Gen. 16GB, Wi-Fi, 9.7in - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$94.99</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://i.ebayimg.com/thumbs/images/g/8LcAAOSw4a1lTNJ9/s-l300.webp" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
+                            <a href="product-detail.html?product_id=18">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://i.ebayimg.com/thumbs/images/g/8LcAAOSw4a1lTNJ9/s-l300.webp" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
                                     </div>
-                                    <div class="ratting-ratio">5/5</div>
-                                </div>
-                                <div class="description">Lenovo Tab P12, 12.7" 400 nits, 8GB, 128GB, ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$419.99</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Lenovo Tab P12, 12.7" 400 nits, 8GB, 128GB, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$419.99</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=19">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://i.ebayimg.com/thumbs/images/g/YMIAAOSwtiJkymV6/s-l225.webp" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">4.9/5</div>
+                                    </div>
+                                    <div class="description">Lenovo LOQ 16" RTX 4050 144HZ AMD Ryzen Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price"></div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=20">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://i.ebayimg.com/thumbs/images/g/SXMAAOSwOydl7j5X/s-l300.webp" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="ratting-ratio">3/5</div>
+                                    </div>
+                                    <div class="description">Dell Latitude 5289 2-in-1 Touchscreen Laptop i5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$231.12</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=21">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://i.ebayimg.com/thumbs/images/g/SbcAAOSwTSJiN-lQ/s-l300.webp" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
+                                    </div>
+                                    <div class="description">Nintendo DS Lite Authentic DSL Console Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$13.58</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=22">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://i.ebayimg.com/thumbs/images/g/9boAAOSw4SBl-GZm/s-l300.webp" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="ratting-ratio">4.2/5</div>
+                                    </div>
+                                    <div class="description">GUARANTEED Fat Playstation 2 Console Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$244.71</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=23">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://i.ebayimg.com/thumbs/images/g/A0QAAOSwKIdaZFiL/s-l225.webp" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
+                                    </div>
+                                    <div class="description">Apple iPad Air 1st Gen. 16GB, Wi-Fi, 9.7in - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$94.99</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=24">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://i.ebayimg.com/thumbs/images/g/8LcAAOSw4a1lTNJ9/s-l300.webp" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
+                                    </div>
+                                    <div class="description">Lenovo Tab P12, 12.7" 400 nits, 8GB, 128GB, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$419.99</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -428,136 +892,292 @@
                     <div class="heading">Clothing</div>
                     <div class="owl-carousel product-carousel">
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/71ygLu2o0OL._AC_SX679_.jpg" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
+                            <a href="product-detail.html?product_id=25">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/71ygLu2o0OL._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">4.9/5</div>
                                     </div>
-                                    <div class="ratting-ratio">4.9/5</div>
-                                </div>
-                                <div class="description">Pyrex Glass Measuring Cup Set (3-Piece Set ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$23.39</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Pyrex Glass Measuring Cup Set (3-Piece Set Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$23.39</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81QCOKw3AuL._AC_SX679_.jpg" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                            <a href="product-detail.html?product_id=26">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81QCOKw3AuL._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="ratting-ratio">3/5</div>
                                     </div>
-                                    <div class="ratting-ratio">3/5</div>
-                                </div>
-                                <div class="description">Easywring Microfiber Spin Mop Good For ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$23.39</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Easywring Microfiber Spin Mop Good For Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$23.39</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/710dYCmCvQL._AC_SX679_.jpg" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
+                            <a href="product-detail.html?product_id=27">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/710dYCmCvQL._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
                                     </div>
-                                    <div class="ratting-ratio">5/5</div>
-                                </div>
-                                <div class="description">Home Hero 33 Pcs Silicone Kitchen Utencils ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$14.99</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Home Hero 33 Pcs Silicone Kitchen Utencils Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$14.99</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81WR5GYdJvL._AC_SX679_PIbundle-2,TopRight,0,0_SH20_.jpg" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star"></i>
+                            <a href="product-detail.html?product_id=28">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81WR5GYdJvL._AC_SX679_PIbundle-2,TopRight,0,0_SH20_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="ratting-ratio">4.2/5</div>
                                     </div>
-                                    <div class="ratting-ratio">4.2/5</div>
-                                </div>
-                                <div class="description">Utopia Kitchen Can Organizer For Pantry ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$14.99</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Utopia Kitchen Can Organizer For Pantry Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$14.99</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
+                            <a href="product-detail.html?product_id=29">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
                                     </div>
-                                    <div class="ratting-ratio">5/5</div>
-                                </div>
-                                <div class="description">Vegetable Chopper, Pro Onion Chopper With ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$18.89</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Vegetable Chopper, Pro Onion Chopper With Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$18.89</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
+                            <a href="product-detail.html?product_id=30">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
                                     </div>
-                                    <div class="ratting-ratio">5/5</div>
-                                </div>
-                                <div class="description">Vegetable Chopper, Pro Onion Chopper With ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$18.89</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Vegetable Chopper, Pro Onion Chopper With Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$18.89</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=31">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/71ygLu2o0OL._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">4.9/5</div>
+                                    </div>
+                                    <div class="description">Pyrex Glass Measuring Cup Set (3-Piece Set Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$23.39</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=32">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81QCOKw3AuL._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="ratting-ratio">3/5</div>
+                                    </div>
+                                    <div class="description">Easywring Microfiber Spin Mop Good For Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$23.39</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=33">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/710dYCmCvQL._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
+                                    </div>
+                                    <div class="description">Home Hero 33 Pcs Silicone Kitchen Utencils Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$14.99</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=34">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81WR5GYdJvL._AC_SX679_PIbundle-2,TopRight,0,0_SH20_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="ratting-ratio">4.2/5</div>
+                                    </div>
+                                    <div class="description">Utopia Kitchen Can Organizer For Pantry Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$14.99</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=35">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
+                                    </div>
+                                    <div class="description">Vegetable Chopper, Pro Onion Chopper With Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$18.89</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=36">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
+                                    </div>
+                                    <div class="description">Vegetable Chopper, Pro Onion Chopper With Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$18.89</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -567,136 +1187,292 @@
                     <div class="heading">Automotive</div>
                     <div class="owl-carousel product-carousel">
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/71ygLu2o0OL._AC_SX679_.jpg" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
+                            <a href="product-detail.html?product_id=37">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/71ygLu2o0OL._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">4.9/5</div>
                                     </div>
-                                    <div class="ratting-ratio">4.9/5</div>
-                                </div>
-                                <div class="description">Pyrex Glass Measuring Cup Set (3-Piece Set ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$23.39</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Pyrex Glass Measuring Cup Set (3-Piece Set Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$23.39</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81QCOKw3AuL._AC_SX679_.jpg" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                            <a href="product-detail.html?product_id=38">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81QCOKw3AuL._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="ratting-ratio">3/5</div>
                                     </div>
-                                    <div class="ratting-ratio">3/5</div>
-                                </div>
-                                <div class="description">Easywring Microfiber Spin Mop Good For ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$23.39</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Easywring Microfiber Spin Mop Good For Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$23.39</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/710dYCmCvQL._AC_SX679_.jpg" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
+                            <a href="product-detail.html?product_id=39">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/710dYCmCvQL._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
                                     </div>
-                                    <div class="ratting-ratio">5/5</div>
-                                </div>
-                                <div class="description">Home Hero 33 Pcs Silicone Kitchen Utencils ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$14.99</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Home Hero 33 Pcs Silicone Kitchen Utencils Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$14.99</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81WR5GYdJvL._AC_SX679_PIbundle-2,TopRight,0,0_SH20_.jpg" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star"></i>
+                            <a href="product-detail.html?product_id=40">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81WR5GYdJvL._AC_SX679_PIbundle-2,TopRight,0,0_SH20_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="ratting-ratio">4.2/5</div>
                                     </div>
-                                    <div class="ratting-ratio">4.2/5</div>
-                                </div>
-                                <div class="description">Utopia Kitchen Can Organizer For Pantry ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$14.99</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Utopia Kitchen Can Organizer For Pantry Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$14.99</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
+                            <a href="product-detail.html?product_id=41">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
                                     </div>
-                                    <div class="ratting-ratio">5/5</div>
-                                </div>
-                                <div class="description">Vegetable Chopper, Pro Onion Chopper With ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$18.89</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Vegetable Chopper, Pro Onion Chopper With Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$18.89</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="item">
-                            <div class="product-card">
-                                <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
-                                <div class="ratting-flex">
-                                    <div class="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
+                            <a href="product-detail.html?product_id=42">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
                                     </div>
-                                    <div class="ratting-ratio">5/5</div>
-                                </div>
-                                <div class="description">Vegetable Chopper, Pro Onion Chopper With ...</div>
-                                <div class="bottom-flex">
-                                    <div class="price">$18.89</div>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="btn btn-cart">Add to Cart</a>
+                                    <div class="description">Vegetable Chopper, Pro Onion Chopper With Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$18.89</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=43">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/71ygLu2o0OL._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">4.9/5</div>
+                                    </div>
+                                    <div class="description">Pyrex Glass Measuring Cup Set (3-Piece Set Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$23.39</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=44">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81QCOKw3AuL._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="ratting-ratio">3/5</div>
+                                    </div>
+                                    <div class="description">Easywring Microfiber Spin Mop Good For Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$23.39</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=45">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/710dYCmCvQL._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
+                                    </div>
+                                    <div class="description">Home Hero 33 Pcs Silicone Kitchen Utencils Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$14.99</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=46">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81WR5GYdJvL._AC_SX679_PIbundle-2,TopRight,0,0_SH20_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="ratting-ratio">4.2/5</div>
+                                    </div>
+                                    <div class="description">Utopia Kitchen Can Organizer For Pantry Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$14.99</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=47">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
+                                    </div>
+                                    <div class="description">Vegetable Chopper, Pro Onion Chopper With Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$18.89</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="product-detail.html?product_id=48">
+                                <div class="product-card">
+                                    <div class="img text-center"><img src="https://m.media-amazon.com/images/I/81tV-nZg9-L._AC_SX679_.jpg" class="w-100"></div>
+                                    <div class="ratting-flex">
+                                        <div class="stars">
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                            <i class="fas fa-star active"></i>
+                                        </div>
+                                        <div class="ratting-ratio">5/5</div>
+                                    </div>
+                                    <div class="description">Vegetable Chopper, Pro Onion Chopper With Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quae ut soluta doloribus</div>
+                                    <div class="bottom-flex">
+                                        <div class="price">$18.89</div>
+                                        <div class="add-to-cart">
+                                            <a href="#" class="btn btn-cart">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>

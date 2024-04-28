@@ -2,11 +2,11 @@
 jQuery(".product-carousel").owlCarousel({
     autoplay: false,
     rewind: false,
-    loop: false,
+    loop: true,
     margin: 20, 
     responsiveClass: true,
     autoHeight: true,
-    nav: false,
+    nav: true,
     dots: false,
     responsive: {
       0: {
@@ -14,11 +14,19 @@ jQuery(".product-carousel").owlCarousel({
       },
   
       600: {
-        items: 1
+        items: 2
+      },
+
+      720: {
+        items: 3
+      },
+
+      850: {
+        items: 4
       },
   
-      1024: {
-        items: 4
+      1124: {
+        items: 5
       },
   
       1366: {
@@ -30,11 +38,11 @@ jQuery(".product-carousel").owlCarousel({
 jQuery(".category-carousel").owlCarousel({
     autoplay: false,
     rewind: false,
-    loop: false,
+    loop: true,
     margin: 20, 
     responsiveClass: true,
     autoHeight: true,
-    nav: false,
+    nav: true,
     dots: false,
     responsive: {
       0: {
@@ -42,7 +50,7 @@ jQuery(".category-carousel").owlCarousel({
       },
   
       600: {
-        items: 3
+        items: 4
       },
   
       1024: {
@@ -54,11 +62,13 @@ jQuery(".category-carousel").owlCarousel({
       }
     }
 });
+$( ".owl-prev").html('<i class="fa fa-chevron-left"></i>');
+$( ".owl-next").html('<i class="fa fa-chevron-right"></i>');
 
 
 // countdown
 
-var countDownDate = new Date("April 12, 2024 10:37:25").getTime();
+var countDownDate = new Date("April 25, 2024 12:30:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -76,12 +86,12 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("countDownTimer").innerHTML = hours + ":"
-  + minutes + ":" + seconds + "";
+    var timer = hours + ":" + minutes + ":" + seconds + "";
+  $("#countDownTimer").html(timer);
     
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("countDownTimer").innerHTML = "EXPIRED";
+    $("#countDownTimer").html("EXPIRED");
   }
 }, 1000);
